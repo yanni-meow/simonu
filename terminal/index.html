@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Акбарс терминал</title>
+
+    <script type="text/javascript">
+        function zero_first_format(value) {
+            if (value < 10) {
+                value='0'+value;
+            }
+            return value;
+        }
+        function date_time() {
+            var current_datetime = new Date();
+            var hours = zero_first_format(current_datetime.getHours());
+            var minutes = zero_first_format(current_datetime.getMinutes());
+            console.log('meow');
+            return hours+":"+minutes;
+        }
+        setInterval(function () {
+            document.getElementById('time').innerHTML = date_time();
+        }, 1000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="./images/logo1.svg" alt="logo"/>
+                <img src="./images/logo2.svg" alt="logo"/>
+            </div>
+            <div id="time"></div>
+        </header>
+        <div class="main">
+            <h1>Здравствуйте! <br/>Выберите интересующую услугу</h1>
+            <div class="main__content">
+                <div class="main__content__item">
+                    <img src="./images/icon1.svg" alt="1" />
+                    <p>Валюта</p>
+                </div>
+                <div class="main__content__item">
+                    <img src="./images/icon2.svg" alt="2" />
+                    <p>Кредиты</p>
+                </div>
+                <div class="main__content__item">
+                    <img src="./images/icon3.svg" alt="3" />
+                    <p>Карты</p>
+                </div>
+                <div class="main__content__item">
+                    <img src="./images/icon4.svg" alt="4" />
+                    <p>Кассовое обслуживание</p>
+                </div>
+                <div class="main__content__item">
+                    <img src="./images/icon5.svg" alt="5" />
+                    <p>Вклады и счета</p>
+                </div>
+                <div class="main__content__item">
+                    <img src="./images/icon6.svg" alt="6" />
+                    <p>Переводы</p>
+                </div>
+                <div class="main__content__item">
+                    <img src="./images/icon7.svg" alt="7" />
+                    <p>Пенсия, субсидии, платежи</p>
+                </div>
+                <div class="main__content__item">
+                    <img src="./images/icon8.svg" alt="8" />
+                    <p>Прочие услуги</p>
+                </div>
+            </div>
+            <button>Нажмите, чтобы мы Вас узнали</button>
+        </div>
+    </div>
+</body>
+</html>
